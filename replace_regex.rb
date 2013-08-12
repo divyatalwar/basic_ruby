@@ -1,4 +1,7 @@
+def check_regex(string)
+  string.each_char { |i| string[i] = "*" if i =~ /[aeiou]/i }
+  string
+end
 puts "please enter input string: "
-string = gets
-string = string.gsub(/a|e|i|o|u/i, "*")
-puts string
+string = gets.chomp
+puts check_regex(string)
