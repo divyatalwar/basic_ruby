@@ -10,8 +10,8 @@ def fibonacci_series
   end
 end
 fibonacci_series do
-|series , max_limit|
-break if series > max_limit
-print "#{series}"
+  |series , max_limit|
+  break if series > max_limit
+  print "#{series}"
 end
 puts "\n"
