@@ -1,7 +1,9 @@
-def check(string)
-  return if string =~ /^[q]$/i
-  puts "the given input string is " + ( string == string.reverse ? "" : "not" ) + " a palindrome"
-end 
+class String
+  def palindrome
+    self == reverse 
+  end 
+end
 puts "Enter the string"
-string = gets.downcase.chomp
-check(string)
+input = gets.chomp
+return if input =~ /^[q]$/i
+print "input string is " , input.downcase.palindrome ? " a palindrome" : "not a palindrome" ,"\n"
