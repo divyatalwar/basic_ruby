@@ -12,15 +12,13 @@ class Array
     new_hash
   end
   def group
-    array_to_hash.inject(Hash.new) do |hash, (key, value) |
+    array_to_hash.inject(Hash.new {|hash, key| hash[key] = [] }) do |new_hash, (key, value) |
       if key.odd?
-        hash["odd"] ||=[]
-        hash["odd"] << value
+        new_hash["odd"] << value
       else
-        hash["even"] ||=[]
-        hash["even"] << value
+        new_hash["even"] << value
       end
-      hash
+      new_hash
     end
   end
 end
