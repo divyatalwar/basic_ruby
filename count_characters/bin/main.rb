@@ -1,4 +1,4 @@
 require_relative "../lib/count"
 puts "enter the string"
-input=gets.chomp
-input.count_characters
+input_string = gets.chomp
+input_string.count_characters

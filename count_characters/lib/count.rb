@@ -5,11 +5,14 @@ class String
     digits = 0
     special_characters = 0
     each_char do |element|
-      case element
-        when ('a'..'z') then lowercase += 1
-        when ('A'..'Z') then uppercase += 1
-        when ('0'..'9') then digits += 1
-        else special_characters += 1
+      if ('a'..'z') === element 
+        lowercase += 1
+      elsif ('A'..'Z') ===  element
+         uppercase += 1
+      elsif ('0'..'9') === element
+        digits += 1
+      elsif !(element =~ /\s/) 
+        special_characters += 1
       end
     end
     puts "Lowercase characterss: #{lowercase}\nUppercase characters : #{uppercase}\nDigits : #{digits}\nSpecial Characters : #{special_characters}\n"
