@@ -1,4 +1,4 @@
-require_relative "vehicle_info"
+require_relative "vehicle"
 class Bike < Vehicle
   def initialize(name,price,dealer)
     super(name,price)
