@@ -15,7 +15,7 @@ class Account
       @balance -= amount
       print "withdrawn ", amount , " from account no. ", @current_account_number, "\n"
     else
-      print "You cannot withdraw. Your account balance is insufficient.\n"
+      print "You cannot withdraw . Your account balance is insufficient.\n"
     end
   end
   def inspect

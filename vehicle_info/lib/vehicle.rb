@@ -5,7 +5,7 @@ class Vehicle
     @price = price
   end
   def inspect
-    " name : #@name  price : #@price "
+    " name : #@name , price : #@price "
   end
 end
 

@@ -11,7 +11,7 @@ class String
          uppercase += 1
       elsif ('0'..'9') === element
         digits += 1
-      elsif !(element =~ /\s/) 
+      elsif !( element =~ /\s/) 
         special_characters += 1
       end
     end
