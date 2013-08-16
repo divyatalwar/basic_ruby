@@ -1,2 +1,2 @@
-require_relative "../lib/hash_inject"
+require_relative "../lib/array"
 puts ['abc','def',1234,234,'abcd','x','mnop',5,'zZzZ'].group

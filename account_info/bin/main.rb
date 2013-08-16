@@ -1,4 +1,4 @@
-require_relative "../lib/account_info"
+require_relative "../lib/account"
 account1 = Account.new("Divya", 2000);
 account1.deposit(500);
 account1.withdraw(250);
