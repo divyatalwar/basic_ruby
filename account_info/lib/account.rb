@@ -19,6 +19,6 @@ class Account
     end
   end
   def inspect
-    " #@name with account number #@current_account_number has balance #@balance"
+    " #@name with account number #@current_account_number has  balance #@balance"
   end
 end
