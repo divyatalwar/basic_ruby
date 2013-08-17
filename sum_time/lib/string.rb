@@ -1,7 +1,7 @@
 require "time"
 class String
   def valid?
-    time_format = /([0-1]?[0-9]|2[0-3]):([0-5][0-9]|[60]):([0-5][0-9]|[60])/
+    time_format = /([0-1]?[0-9]|2[0-3]):([0-5][0-9]|60):([0-5][0-9]|60)/
     return true if self =~ time_format
   end
   def to_seconds(time)
