@@ -11,8 +11,8 @@ class String
   def add_time(time2)
     first_time = to_seconds(self)
     second_time = to_seconds(time2)
-    result_time = first_time + second_time
-    time_string = "Time after addition is: \n" + ( result_time > 24 * 3600 ? "1 day & " : "") + Time.at(result_time).utc.strftime("%H : %M : %S") 
+    total_time = first_time + second_time
+    time_string = "Time after addition is: \n" + ( total_time > 24 * 3600 ? "1 day & " : "") + Time.at(total_time).utc.strftime("%H : %M : %S") 
     puts time_string
   end
 end
