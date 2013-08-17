@@ -9,13 +9,9 @@ class Array
   end
   def group
     array_to_hash.inject(Hash.new {|hash, key| hash[key] = [] }) do |new_hash, (key, value) |
-      if key.odd?
-        new_hash["odd"] << value
-      else
-        new_hash["even"] << value
-      end
+      new_hash[key.odd? ? 'odd' : 'even' ] << value 
       new_hash
-    end
+    end  
   end
 end
 
