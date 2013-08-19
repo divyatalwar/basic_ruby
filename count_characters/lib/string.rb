@@ -15,7 +15,7 @@ class String
         special_characters += 1
       end
     end
-    puts " Lowercase characterss: #{lowercase}\nUppercase characters : #{uppercase}\nDigits : #{digits}\nSpecial Characters : #{special_characters}\n"
+    puts " Lowercase characterss: #{ lowercase }\nUppercase characters : #{ uppercase }\nDigits : #{ digits }\nSpecial Characters : #{ special_characters }\n"
   end
 end
 
