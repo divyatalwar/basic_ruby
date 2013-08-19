@@ -1,3 +1,4 @@
+
 require_relative "../lib/interest"
 print "Enter the principal: "
 principal = gets.chomp
