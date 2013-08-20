@@ -1,2 +1,5 @@
 require_relative "../lib/pascal"
-pascal(6) 
+puts "Enter the number of rows for pascal triangle"
+rows = gets.to_i 
+puts "the required pascal triangle is"
+pascal(rows) 
