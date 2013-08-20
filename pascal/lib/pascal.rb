@@ -1,5 +1,5 @@
 def pascal_generator(value)
-  for i in 1..(value + 1) 
+   (value + 1).times do |i| 
     yield(i)
     puts ""
   end
@@ -8,9 +8,9 @@ end
 def pascal(number) 
   pascal_generator(number) do |i|
     x = 1
-    for j in 1..i
+    (i+1).times do |j|
       print x ," "
-      x = x * (i - j) / (j)
+      x = x * (i+1 - (j+1)) / (j+1)
     end
   end
 end
