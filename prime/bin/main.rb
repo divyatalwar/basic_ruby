@@ -6,5 +6,5 @@ if(input_number < 2)
   exit
 end
 puts "Prime Numbers upto #{input_number} \n2"
-3.step(input_number, 2).each {|input| puts input if input.prime }
+input_number.prime_numbers_till
 
