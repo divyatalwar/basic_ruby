@@ -2,7 +2,7 @@
 class Interest
   attr_accessor :principal, :time
   def initialize
-    yield self
+   @principal ,@time =yield
     @rate = 10
   end
   def simple_interest

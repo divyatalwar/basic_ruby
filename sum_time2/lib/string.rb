@@ -6,7 +6,7 @@ require "time"
   end
   def to_seconds
     new_tym = Time.parse(self)
-    return ((new_tym.hour * 3600) + (new_tym.min * 60) + new_tym.sec)
+   return ((new_tym.hour * 3600) + (new_tym.min * 60) + new_tym.sec)
   end
   
 end
