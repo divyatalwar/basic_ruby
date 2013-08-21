@@ -1,3 +1,4 @@
+
 require "time"
  class String
   def valid?
@@ -5,8 +6,8 @@ require "time"
     return true if self =~ time_format 
   end
   def to_seconds
-    new_tym = Time.parse(self)
-   return ((new_tym.hour * 3600) + (new_tym.min * 60) + new_tym.sec)
+    new_time = Time.parse(self)
+   return ((new_time.hour * 3600) + (new_time.min * 60) + new_time.sec)
   end
   
 end
