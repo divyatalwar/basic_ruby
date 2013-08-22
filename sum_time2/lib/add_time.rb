@@ -3,7 +3,7 @@ def add_time(*time_args)
   total_time = 0 
   time_args.each { |date| abort("invalid") if !date.valid? }
   time_args.each do |new_time| 
-  total_time += new_time.to_seconds
+    total_time += new_time.to_seconds
   end
   number_of_days = ""
   days = (total_time / ( 24 * 3600 )).to_i
