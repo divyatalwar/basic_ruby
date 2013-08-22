@@ -1,3 +1,4 @@
+
 require_relative '../lib/name'
 puts "Enter the first name"
 first_name = gets.chomp
