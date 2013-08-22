@@ -1,10 +1,10 @@
 require_relative "../lib/string"
-puts "enter the first time"
+puts "Enter the first time"
 time1 = gets.chomp
-puts "enter the second time"
-time2=gets.chomp
-if (time1.valid? && time2.valid?)
-  time1.add_time(time2)
+puts "Enter the second time"
+time2 = gets.chomp
+if(time1.valid? && time2.valid?)
+  puts time1.add_time(time2)
 else 
-  puts "enter valid time"
+  puts "Enter valid time"
 end
