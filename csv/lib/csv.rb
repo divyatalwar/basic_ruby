@@ -1,5 +1,6 @@
 require "csv"
 class Csv
+ 
   def initialize
     @hash = Hash.new{ |hash, key| hash[key] = [] }
   end
@@ -20,4 +21,5 @@ class Csv
       end
     end
   end
+
 end
