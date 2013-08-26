@@ -7,8 +7,8 @@ class Print
     puts "".rjust(table_width,'*')
     products.each do |row|
       print "|" , row.name.center(16)
-      print "|" , row.imported.center(16)
-      print "|" , row.sales_tax.center(16)
+      print "|" , row.calculate_import_duty.to_s.center(16)
+      print "|" , row.calculate_sales_tax.to_s.center(16)
       print "|" , row.price.to_s.center(16)
       print "|" , row.total.to_s.center(16)
       puts "|\n"

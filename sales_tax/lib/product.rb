@@ -1,14 +1,14 @@
 class Product
-  attr_reader :price, :name, :sales_tax, :imported, :total
+  attr_reader :price, :name, :sale_tax, :import_duty, :total
   def initialize(name, imported, sales_tax, price)
     @name = name
     @price = price   
-    @sales_tax = sales_tax
-    @imported = imported
+    @sale_tax = sales_tax
+    @import_duty = imported
     @total = calculate_total
   end
   def calculate_sales_tax
-    if @sales_tax =~ /^no$/i
+    if @sale_tax =~ /^no$/i
       sale_tax = @price * 0.1
       sale_tax.round(2)
     else
@@ -16,7 +16,7 @@ class Product
     end  
   end
   def calculate_import_duty
-    if @imported =~ /^yes$/i
+    if @import_duty =~ /^yes$/i
       import_duty = @price * 0.05
       import_duty.round(2)
     else
