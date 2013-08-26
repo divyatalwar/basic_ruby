@@ -1,3 +1,4 @@
+
 class String
   def count_characters
     hash = Hash.new(0)    
