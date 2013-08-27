@@ -1,13 +1,14 @@
+require_relative "exception"
 class Name
   def initialize(first_name, last_name)
     begin  
-      raise 'First name cannot be left empty ' if first_name.strip.empty?
-      raise 'Last name cannot be left empty ' if last_name.strip.empty?
-      raise 'First letter of your first name is not capital ' if !(first_name == first_name.capitalize)
+      raise MyException.new(true), 'First name cannot be null or empty ' if first_name.nil? || first_name.empty?
+      raise MyException.new(true), 'Last name cannot be null or  empty ' if last_name.nil? || last_name.empty?
+      raise MyException.new(true), 'First letter of your first name is not capital ' if !(first_name == first_name.capitalize)
       @first_name = first_name
       @last_name = last_name
-    rescue Exception => exception_type
-      print "Invalid :", exception_type, "\n"     
+    rescue MyException
+      print "Invalid :", $!
     end
   end
 
