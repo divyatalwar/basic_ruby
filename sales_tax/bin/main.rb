@@ -6,9 +6,9 @@ while bool
   print "Name of the product: "
   name = gets.chomp
   print "Imported?: "
-  imported = gets.chomp
+  imported = true if gets.chomp =~ /yes/i
   print "Exempted from sales tax? "
-  sales_tax = gets.chomp
+  sales_tax = true if gets.chomp =~ /yes/i
   print "Price: "
   price = gets.chomp.to_f
   list.push(Product.new(name, imported, sales_tax, price))
