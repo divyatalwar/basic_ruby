@@ -1,4 +1,5 @@
 class Tabular
+
   def self.display_table(header,data_array,grand_total)
     table_width = 17 * header.count
     puts "".rjust(table_width,'*')
@@ -15,4 +16,5 @@ class Tabular
     puts "Grand Total : #{grand_total.to_s}".center(table_width)
     puts "".rjust(table_width,'*')
   end
+
 end
