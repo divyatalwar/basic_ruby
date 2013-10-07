@@ -1,20 +1,23 @@
 require_relative "exception"
 class Name
-  def initialize(first_name, last_name)
-    begin  
-      raise MyException.new(true), 'First name cannot be null or empty ' if first_name.nil? || first_name.empty?
-      raise MyException.new(true), 'Last name cannot be null or  empty ' if last_name.nil? || last_name.empty?
-      raise MyException.new(true), 'First letter of your first name is not capital ' if !(first_name == first_name.capitalize)
-      @first_name = first_name
-      @last_name = last_name
-    rescue MyException
-      print "Invalid :", $!
-    end
+
+  def initialize
+    @first_name = input_name("First") 
+    @last_name = input_name("Last") 
+  end
+
+  def input_name(type)
+    puts "Enter #{type} name:"
+    input = gets.chomp
+    raise NameNilOrEmptyError ,"#{type} name cannot be null or empty" if input.nil? || input.empty?
+    raise FirstNameNotCapital ,"first letter ot capital" if type == "First" && (input != input.capitalize)
+    input
   end
 
   def to_s
     "#{ @first_name } #{ @last_name }"
   end
+
 end
 
 

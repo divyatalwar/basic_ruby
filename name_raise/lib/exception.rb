@@ -1,6 +1,7 @@
-class MyException < StandardError
-  attr_reader :error
-  def initialize(error)
-    @error = error
-  end
+class NameNilOrEmptyError < StandardError
+
+end
+
+class FirstNameNotCapital < StandardError
+
 end
