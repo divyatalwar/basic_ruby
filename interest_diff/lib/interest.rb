@@ -3,7 +3,7 @@ class Interest
   RATE = 10.0
   attr_accessor :principal, :time
   def initialize
-    yield self
+    @principal,@time = yield 
   end
   def rate
     RATE/100.0
